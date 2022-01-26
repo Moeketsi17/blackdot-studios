@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>blackdot</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
 </head>
 <body>
+    <div class="cursor"></div>
     <nav class="nav-bar">
         <div class="logo">
             <a href="">BLACKDOT <br>STUDIOS</a>
@@ -89,6 +90,8 @@
                         evaluated.
                     </p>
                 </div>
+            </div>
+            
             <div class="box-container">
                 <div class="box">
                     <h4 class="heading">Marketing</h4>
@@ -106,7 +109,9 @@
                 <div class="box">
                     <h4 class="heading">Development</h4>
                     <p class="box-text">
-                        
+                        Our aim is to create immersive digital products that
+                        are unique yet easy to use. We achieve this by 
+                        using the latest web technologies.
                     </p>
                 </div>
             </div>
@@ -118,76 +123,110 @@
 
     <section class="work-section">
         <div class="work-container">
-            <h4 class="title">Design</h4>
-            <div class="slider-container">
+            <h4 class="title">Recent ptojects</h4>
+            <div class="arrows">
+                <div class="arrow arrow-left" id="btn-scroll-left" onclick="scrollHorizontally(1)">
+                    <ion-icon name="chevron-back-outline" class="point"></ion-icon>
+                </div>
+                <div class="arrow arrow-right" id="btn-scroll-left" onclick="scrollHorizontally(-1)">
+                    <ion-icon name="chevron-forward-outline" class="point"></ion-icon>
+                </div>
+            </div>
+            <div class="slider-container" >
                 <div class="work-img-container">
                     <div class="img-container img1"></div>
                     <div class="img-text">
-                        <h6 class="img-text-heading"></h6>
-                        <p class="img-text-about"></p>
+                        <h6 class="img-text-heading">SPACES</h6>
+                        <p class="img-text-about">Design | Branding | Marketing</p>
                     </div>
                 </div>
                 <div class="work-img-container">
                     <div class="img-container img2"></div>
                     <div class="img-text">
-                        <h6 class="img-text-heading"></h6>
-                        <p class="img-text-about"></p>
+                        <h6 class="img-text-heading">MERCURY</h6>
+                        <p class="img-text-about">Design | Branding</p>
                     </div>
                 </div>
                 <div class="work-img-container">
                     <div class="img-container img3"></div>
                     <div class="img-text">
-                        <h6 class="img-text-heading"></h6>
-                        <p class="img-text-about"></p>
+                        <h6 class="img-text-heading">Castro Cap</h6>
+                        <p class="img-text-about">Design | Branding | Development</p>
                     </div>
                 </div>
                 <div class="work-img-container">
                     <div class="img-container img4"></div>
                     <div class="img-text">
-                        <h6 class="img-text-heading"></h6>
-                        <p class="img-text-about"></p>
+                        <h6 class="img-text-heading">Lofers</h6>
+                        <p class="img-text-about">Design | Branding</p>
+                    </div>
+                </div>
+                <div class="work-img-container">
+                    <div class="img-container img5"></div>
+                    <div class="img-text">
+                        <h6 class="img-text-heading">Worvic</h6>
+                        <p class="img-text-about">Marketing</p>
+                    </div>
+                </div>
+                <div class="work-img-container">
+                    <div class="img-container img6"></div>
+                    <div class="img-text">
+                        <h6 class="img-text-heading">lift</h6>
+                        <p class="img-text-about">Design | Development</p>
+                    </div>
+                </div>
+                <div class="work-img-container">
+                    <div class="img-container img7"></div>
+                    <div class="img-text">
+                        <h6 class="img-text-heading">Thabong</h6>
+                        <p class="img-text-about">Design | Branding</p>
+                    </div>
+                </div>
+                <div class="work-img-container">
+                    <div class="img-container img8"></div>
+                    <div class="img-text">
+                        <h6 class="img-text-heading">J Apparel</h6>
+                        <p class="img-text-about">Marketing</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="work-container">
-            <h4 class="title">Design</h4>
-            <div class="work-img-container">
-                <div class="img-container img1"></div>
-                <div class="img-text">
-                    <h6 class="img-text-heading"></h6>
-                    <p class="img-text-about"></p>
-                </div>
+    </section>
+    <footer class="footer">
+        <div class="marquee">
+            <h2 class="getin">GET IN TOUCH</h2>
+        </div>
+        <div class="footer-section">
+            <div class="footer-contact footer-cursor">
+                <p class="footer-info-heading">Stat a Project</p>
+                <p class="footer-info"><a href="">info@blackdot.studio</a></p>
+                <p class="footer-info"><a href="">+27 12 252 2536</a></p>
+                <p class="footer-info-heading">Collaborate with Us</p>
+                <p class="footer-info"><a href="">collab@blackdot.studio</a></p>
             </div>
-            <div class="work-img-container">
-                <div class="img-container img2"></div>
-                <div class="img-text">
-                    <h6 class="img-text-heading"></h6>
-                    <p class="img-text-about"></p>
-                </div>
+            <div class="footer-follow footer-cursor">
+                <p class="footer-info-heading">Follow Us</p>
+                <p class="footer-info"><a href="">Twitter</a></p>
+                <p class="footer-info"><a href="">Instagram</a></p>
+                <p class="footer-info"><a href="">BeHance</a></p>
+                <p class="footer-info"><a href="">Dribble</a></p>
             </div>
-            <div class="work-img-container">
-                <div class="img-container img3"></div>
-                <div class="img-text">
-                    <h6 class="img-text-heading"></h6>
-                    <p class="img-text-about"></p>
-                </div>
-            </div>
-            <div class="work-img-container">
-                <div class="img-container img4"></div>
-                <div class="img-text">
-                    <h6 class="img-text-heading"></h6>
-                    <p class="img-text-about"></p>
-                </div>
+            <div class="footer-links footer-cursor">
+                <p class="footer-info-heading">Links</p></a>
+                <p class="footer-info"><a href="">About</a></p>
+                <p class="footer-info"><a href="">Services</a></p>
+                <p class="footer-info"><a href="">Contact</a></p>
             </div>
         </div>
-    </section>
+    </footer>
     
     
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- scroll trigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- simplescroll -->
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
     <!-- anime -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="/app.js"></script>
