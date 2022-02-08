@@ -10,6 +10,19 @@
     <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
 </head>
 <body>
+    <!-- splash intro section -->
+    <main class="intro">
+        <div class="intro-text">
+            <h1 class="hide-text">
+                <span>BLACKDOT</span>
+            </h1>
+            <div class="circle-intro1">
+                <div class="circle-inner1"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- navbar section -->
     <div class="cursor"></div>
     <nav class="nav-bar">
         <div class="logo">
@@ -23,8 +36,8 @@
     </nav>
     <div class="nav-links">
         <ul class="main-links">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
             <li><a href="">Services</a></li>
             <li><a href="">Contact</a></li>
         </ul>
@@ -47,7 +60,9 @@
             <p>+27 11 733 3682</p>
         </div>
     </div>
+    
 
+    <!-- header section -->
     <header>
         <div class="header-name-container">
             <h1 class="header-name">BLACKDOT</h1>
@@ -61,14 +76,15 @@
         <div class="vert-stroke"></div>
     </header>
 
+    <!-- what we do section  -->
     <section class="we-do-container">
         <div class="we-do-img"></div>
         <h4 class="title">WHAT WE DO</h4>
         <div class="container">
             <div class="box-container">
                 <div class="box">
-                    <h4 class="heading">Design</h4>
-                    <p class="box-text">
+                    <h4 class="heading heading-right-1">Design</h4>
+                    <p class="box-text text-right-1">
                         At the core of our design philosophy
                         is problem solving. By understanding
                         our clients objectives and values, we
@@ -79,8 +95,8 @@
                     </p>
                 </div>
                 <div class="box">
-                    <h4 class="heading">Branding</h4>
-                    <p class="box-text">
+                    <h4 class="heading heading-left-1">Branding</h4>
+                    <p class="box-text text-left-1">
                         We put ourselves in the position of our 
                         clients customers and try to imagine how
                         to create an absolute perception of your 
@@ -94,8 +110,8 @@
             
             <div class="box-container">
                 <div class="box">
-                    <h4 class="heading">Marketing</h4>
-                    <p class="box-text">
+                    <h4 class="heading heading-right-2">Marketing</h4>
+                    <p class="box-text text-right-2">
                         We always provide a strong foundation
                         in SEO and Google Analytics with every
                         website we build. Selling online goes 
@@ -107,8 +123,8 @@
                     </p>
                 </div>
                 <div class="box">
-                    <h4 class="heading">Development</h4>
-                    <p class="box-text">
+                    <h4 class="heading heading-left-2">Development</h4>
+                    <p class="box-text text-left-2">
                         Our aim is to create immersive digital products that
                         are unique yet easy to use. We achieve this by 
                         using the latest web technologies.
@@ -121,14 +137,15 @@
         </div>
     </section>
 
+    <!-- work section -->
     <section class="work-section">
         <div class="work-container">
             <h4 class="title">Recent ptojects</h4>
             <div class="arrows">
-                <div class="arrow arrow-left" id="btn-scroll-left" onclick="scrollHorizontally(1)">
+                <div class="arrow arrow-left" id="btn-scroll-left" >
                     <ion-icon name="chevron-back-outline" class="point"></ion-icon>
                 </div>
-                <div class="arrow arrow-right" id="btn-scroll-left" onclick="scrollHorizontally(-1)">
+                <div class="arrow arrow-right" id="btn-scroll-left" >
                     <ion-icon name="chevron-forward-outline" class="point"></ion-icon>
                 </div>
             </div>
@@ -192,6 +209,8 @@
             </div>
         </div>
     </section>
+
+    <!-- footer section -->
     <footer class="footer">
         <div class="marquee">
             <h2 class="getin">GET IN TOUCH</h2>
@@ -230,5 +249,7 @@
     <!-- anime -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="/app.js"></script>
+    <!-- gsap animations -->
+    <script src="/gsap.js"></script>
 </body>
 </html>

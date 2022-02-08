@@ -1,3 +1,4 @@
+// nav animations
 const navLinks = document.querySelector(".nav-links")
 const burger = document.querySelector(".burger")
 const links = document.querySelectorAll('.main-links li')
@@ -41,7 +42,7 @@ burger.addEventListener('click', () => {
 
 
 
-// vustom cursor
+// custom cursor
 let mouseCursor = document.querySelector(".cursor");
 let mainLinks = document.querySelectorAll('.main-links li a');
 let footerLinks = document.querySelector(".footer-cursor")
@@ -63,16 +64,6 @@ mainLinks.forEach(link => {
     });
 })
 
-// footerLinks.forEach(link => {
-//     link.addEventListener("mouseleave", () => {
-//         mouseCursor.classList.remove("link-grow");
-//         link.classList.remove("hovered-link");
-//     });
-//     link.addEventListener("mouseover", () => {
-//         mouseCursor.classList.add("link-grow");
-//         link.classList.add("hovered-link");
-//     });
-// })
 
 
 
@@ -105,7 +96,6 @@ slider.addEventListener('mousemove', (e) => {
     slider.scrollLeft = scrollLeft - walk;
     console.log(walk);
 });
-
 
 
 
