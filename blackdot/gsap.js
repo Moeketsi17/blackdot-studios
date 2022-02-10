@@ -4,9 +4,7 @@ intro.fromTo(".hide-text span", {y: "0%", opacity:1, duration: 2}, {y: "-100%", 
 
 intro.fromTo(".circle-intro1", {opacity: 0,}, {opacity: 1})
 intro.fromTo(".circle-inner1", { opacity:1, duration: 1.5, scale: 1}, {scale: 31, duration: 1});
-// intro.fromTo(".circle-intro", {opacity: 0, clipPath: "circle(10% at 50% 50%)" , duration: 1,delay: 1}, {opacity: 1,
-//     clipPath: "circle(100% at 50% 50%)", duration: 1, ease: "ease-in",});
-intro.to(".intro", {y: "-100%", duration: 0.5, opacity: 0, delay: 1})
+intro.fromTo(".intro",{y: "0"} ,{y: "-100%", duration: 0.5, opacity: 0, delay: 1});
 
 
 
@@ -67,6 +65,48 @@ tl2.from(".heading-right-2", {x: -150, opacity: 0, duration: 0.6}, );
 tl2.from(".text-right-2", {x: -200, opacity: 0, duration: 0.6}, "-=0.6");
 tl2.from(".heading-left-2", {x: 150, opacity: 0, duration: 0.6}, "-=0.6");
 tl2.from(".text-left-2", {x: 200, opacity: 0, duration: 0.6}, "-=0.6");
+
+
+// about section animation
+let tl3 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".about-header-container",
+        start: "center top",
+        
+    }
+});
+
+tl3.from(".hide-div p", {y: 100, opacity: 0, duration: 1, stagger: 0.2,});
+
+let tl4 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".about-info",
+        start: "top center",
+        
+    }
+});
+
+tl4.from(".about-info-text", {x: -100, opacity: 0, duration: 1,});
+
+let tl5 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".title",
+        start: "top center",
+        
+    }
+});
+
+tl5.from(".circle", {x: -100, opacity: 0, duration: 1,stagger: 0.2,});
+tl5.from(".arrow-circle", {x: -100, opacity: 0, duration: 1,}, "-=1");
+tl5.from(".circle-text span", {x: -100, opacity: 0, duration: 1,}, "-=1");
+
+
+
+
+
+
+
+
 
 
 
