@@ -1056,7 +1056,7 @@ header {
         transform: translateX(0);
         transition: transform 0.3s ease-in-out;
         position: fixed;
-        z-index: 100000;  
+        z-index: 100002;  
         top: 0;
         left: 0;
         display: flex;
@@ -1290,6 +1290,7 @@ header {
     /* recent slider ptojects dection */
     .work-container {
         position: relative;
+        z-index: 100000;
     }
 
     .img-text {
@@ -1446,7 +1447,7 @@ header {
     .about-info-text {
         font-size: 18px;
         margin-bottom: 1rem;
-        font-weight: 400;
+        font-weight: 300;
         width: 440px;
     }
 
@@ -1509,6 +1510,91 @@ header {
     }
 
 
+
+    /* team section */
+
+    .team-section-img {
+        height: 80vh;
+        width: 100%;
+        background: url(/images/about2.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .team-section {
+        padding: 3rem 0 0;
+    }
+
+
+    .box-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+
+    .team-box {
+        width: 390px;
+        height: 500px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-text {
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .team-img {
+        width: 370px;
+        height: 400px;
+        background: orchid;
+        margin-bottom: 20px;
+    }
+
+    .team-img1 {
+        background: url(/images/team1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .team-img2 {
+        background: url(/images/team6.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .team-img3 {
+        background: url(/images/team2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .team-img4 {
+        background: url(/images/team5.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .team-img5 {
+        background: url(/images/team3.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .team-img6 {
+        background: url(/images/team4.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
 
 

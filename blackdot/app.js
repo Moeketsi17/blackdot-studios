@@ -1,3 +1,29 @@
+// custom cursor
+let mouseCursor = document.querySelector(".cursor");
+let mainLinks = document.querySelectorAll('.main-links li a');
+let footerLinks = document.querySelector(".footer-cursor")
+
+window.addEventListener("mousemove", cursor)
+function cursor(e){
+    mouseCursor.style.top = e.pageY + "px";
+    mouseCursor.style.left = e.pageX + "px";
+}
+
+mainLinks.forEach(link => {
+    link.addEventListener("mouseleave", () => {
+        mouseCursor.classList.remove("link-grow");
+        link.classList.remove("hovered-link");
+    });
+    link.addEventListener("mouseover", () => {
+        mouseCursor.classList.add("link-grow");
+        link.classList.add("hovered-link");
+    });
+})
+
+
+
+
+
 // nav animations
 const navLinks = document.querySelector(".nav-links")
 const burger = document.querySelector(".burger")
@@ -42,33 +68,9 @@ burger.addEventListener('click', () => {
 
 
 
-// custom cursor
-let mouseCursor = document.querySelector(".cursor");
-let mainLinks = document.querySelectorAll('.main-links li a');
-let footerLinks = document.querySelector(".footer-cursor")
-
-window.addEventListener("mousemove", cursor)
-function cursor(e){
-    mouseCursor.style.top = e.pageY + "px";
-    mouseCursor.style.left = e.pageX + "px";
-}
-
-mainLinks.forEach(link => {
-    link.addEventListener("mouseleave", () => {
-        mouseCursor.classList.remove("link-grow");
-        link.classList.remove("hovered-link");
-    });
-    link.addEventListener("mouseover", () => {
-        mouseCursor.classList.add("link-grow");
-        link.classList.add("hovered-link");
-    });
-})
 
 
-
-
-
-// mouse grab scroll
+// work mouse grab scroll
 const slider = document.querySelector('.slider-container');
 let isDown = false;
 let startX;
@@ -97,6 +99,35 @@ slider.addEventListener('mousemove', (e) => {
     console.log(walk);
 });
 
+
+// about team mouse grab
+const teamSlider = document.querySelector('.team-container');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+teamSlider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    teamSlider.classList.add('active');
+    startX = e.pageX - teamSlider.offsetLeft;
+    scrollLeft = teamSlider.scrollLeft;
+});
+teamSlider.addEventListener('mouseleave', () => {
+    isDown = false;
+    teamSlider.classList.remove('active');
+});
+teamSlider.addEventListener('mouseup', () => {
+    isDown = false;
+    teamSlider.classList.remove('active');
+});
+teamSlider.addEventListener('mousemove', (e) => {
+    if(!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - teamSlider.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    teamSlider.scrollLeft = scrollLeft - walk;
+    console.log(walk);
+});
 
 
 
