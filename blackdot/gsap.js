@@ -3,8 +3,8 @@ const intro = gsap.timeline({defaults: {ease: "power1.out"} });
 intro.fromTo(".hide-text span", {y: "0%", opacity:1, duration: 2}, {y: "-100%", duration: 1,  delay: 1});
 
 intro.fromTo(".circle-intro1", {opacity: 0,}, {opacity: 1})
-intro.fromTo(".circle-inner1", { opacity:1, duration: 1.5, scale: 1}, {scale: 31, duration: 1});
-intro.fromTo(".intro",{y: "0"} ,{y: "-100%", duration: 0.5, opacity: 0, delay: 1});
+intro.fromTo(".circle-inner1", { opacity:1, duration: 1.5, scale: 1}, {scale: 30, duration: 1.5});
+intro.fromTo(".intro",{y: "0"} ,{y: "-100%", duration: 0.5, opacity: 0, delay: 0.3});
 
 
 
@@ -18,11 +18,11 @@ tl1.from(".main-links",
     {opacity: 0, y: -200, duration: 1}, "-=1"
 );
 tl1.from(".header-name", 
-    {opacity: 0, y: 200, duration: 1}
+    {opacity: 0, y: 200, duration: 1, stagger: 0.25}
 );
 
 tl1.from(".header-text", 
-    {opacity: 0, y: 200, duration: 0.6}, 
+    {opacity: 0, y: 200, duration: 0.8}, "-=0.5"
 );
 tl1.from(".vert-stroke", {opacity: 0, y: 100, duration: 0.6,}, )
 
@@ -88,6 +88,7 @@ let tl4 = gsap.timeline({
 
 tl4.from(".about-info-text", {x: -100, opacity: 0, duration: 1,});
 
+// animate circles
 let tl5 = gsap.timeline({
     scrollTrigger: {
         trigger: ".title",
@@ -100,9 +101,31 @@ tl5.from(".circle", {x: -100, opacity: 0, duration: 1,stagger: 0.2,});
 tl5.from(".arrow-circle", {x: -100, opacity: 0, duration: 1,}, "-=1");
 tl5.from(".circle-text span", {x: -100, opacity: 0, duration: 1,}, "-=1");
 
+tl5.from(".circle-mobile", {y: -60, opacity: 0, duration: 1,stagger: 0.2,});
+tl5.from(".arrow-circle-mobile", {y: -60, opacity: 0, duration: 1,}, "-=1");
+tl5.from(".circle-text-mobile span", {y: -60, opacity: 0, duration: 1,}, "-=1");
 
 
+// animate team section
+let tl6 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".container1",
+        start: "top center",
+        
+    }
+});
 
+tl6.from(".team-box", {y: 100, opacity: 0, duration: 1.5, stagger: 0.2,});
+
+let tl7 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".container2",
+        start: "top center",
+        
+    }
+});
+
+tl7.from(".team-box2", {y: 100, opacity: 0, duration: 1.5, stagger: 0.2,});
 
 
 

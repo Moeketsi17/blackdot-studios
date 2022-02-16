@@ -100,35 +100,6 @@ slider.addEventListener('mousemove', (e) => {
 });
 
 
-// about team mouse grab
-const teamSlider = document.querySelector('.team-container');
-let isDown = false;
-let startX;
-let scrollLeft;
-
-teamSlider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    teamSlider.classList.add('active');
-    startX = e.pageX - teamSlider.offsetLeft;
-    scrollLeft = teamSlider.scrollLeft;
-});
-teamSlider.addEventListener('mouseleave', () => {
-    isDown = false;
-    teamSlider.classList.remove('active');
-});
-teamSlider.addEventListener('mouseup', () => {
-    isDown = false;
-    teamSlider.classList.remove('active');
-});
-teamSlider.addEventListener('mousemove', (e) => {
-    if(!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - teamSlider.offsetLeft;
-    const walk = (x - startX) * 3; //scroll-fast
-    teamSlider.scrollLeft = scrollLeft - walk;
-    console.log(walk);
-});
-
 
 
 

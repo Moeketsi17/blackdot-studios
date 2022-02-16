@@ -7,7 +7,12 @@
     box-sizing: border-box;
 }
 
-body {
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body{
     font-size: 10px;
     color: #fff;
     background-color: rgb(0, 0, 0);
@@ -21,8 +26,61 @@ body {
 
 
 /* intro */
+/* intro */
 .intro {
-    display: none;
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.intro-text {
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10000;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide-text {
+    height: 4rem;
+    overflow: hidden;
+}
+
+.hide-text span {
+    color: #000;
+    font-size: 4rem;
+    /* transform: translateY(100%); */
+    display: inline-block;
+    opacity: 0;
+}
+
+.circle-intro1 {
+    width: 100vw;
+    height: 100vh;
+    /* border-radius: 50%; */
+    background-color: rgb(248, 248, 248);
+    position: absolute;
+    opacity: 0;
+    display: grid;
+    place-items: center;
+}
+
+.circle-inner1 {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-color: #000;
 }
 
 
@@ -52,11 +110,10 @@ body {
     width: 100%;
     overflow-x: hidden;
     mix-blend-mode: difference;
-    background: none;
     position: fixed;
     top: 0;
     left: 0;
-    background: none;
+    background: transparent;
 }
 
 .logo {
@@ -464,6 +521,326 @@ header {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* about page starts */
+/* about page starts */
+/* about page starts */
+/* about page starts */
+.about-header-container {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+.abt-header {
+    width: 100%;
+    height: 100vh;
+    background: url(/images/about1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.abt-info-section {
+    padding: 4rem 5%;
+}
+
+.abt-heading {
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 0 5%;
+    overflow: hidden
+}
+
+.hide-div {
+    background-color: black;
+    height: 30px;
+    overflow: hidden;
+    
+}
+
+.about-info {
+    padding: 3rem 0 4rem;
+}
+
+.about-info-text {
+    font-size: 16px;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    padding-right: 20px;
+}
+
+.circles-container {
+    display: none;
+}
+
+.circles-container-mobile {
+    padding: 2rem 0 5rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.arrow-circles-mobile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right: 80px;
+}
+
+.arrow-circle-mobile {
+    position: absolute;
+    width: 500px;
+    transform: rotate(90deg);
+}
+
+.circle-mobile {
+    width: 170px;
+}
+
+.circle2-mobile {
+    position: relative;
+    bottom: 3rem;
+}
+.circle3-mobile {
+    position: relative;
+    bottom: 6rem;
+}
+.circle4-mobile {
+    position: relative;
+    bottom: 9rem;
+}
+
+.arrow-circle-mobile {
+    position: absolute;
+    bottom: 400px;
+    width: 400px;
+}
+
+.circle-text-mobile {
+    height: 380px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    right: 50px;
+    position: absolute;
+    top: 120px;
+}
+
+
+
+/* team section */
+
+.team-section-img {
+    height: 100vh;
+    width: 100%;
+    background: url(/images/about2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.team-section {
+    padding: 2rem 0 0;
+}
+
+.team-box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.team-box, .team-box2 {
+    width: 100%;
+    height: 310px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-text {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+
+.team-img {
+    width: 270px;
+    height: 380px;
+    background: orchid;
+    margin-bottom: 15px;
+}
+
+.team-img1 {
+    background: url(/images/team1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.team-img2 {
+    background: url(/images/team6.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.team-img3 {
+    background: url(/images/team2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.team-img4 {
+    background: url(/images/team5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.team-img5 {
+    background: url(/images/team3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.team-img6 {
+    background: url(/images/team4.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* services section */
+/* services section */
+/* services section */
+/* services section */
+/* services section */
+/* services section */
+.services-header {
+    height: 100vh;
+    width: 100%;
+    background-image: url(/images/services1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* contact section */
+/* contact section */
+/* contact section */
+/* contact section */
+/* contact section */
+/* contact section */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    padding: 7rem 5% 4rem;
+    background-color: #fff;
+}
+
+.contact-text-info {
+    margin-bottom: 4rem;
+}
+
+.contact-text {
+    color: #000;
+}
+
+.contact-text a {
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+}
+
+/* .fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+} */
+
+.rect {
+    height: 35px;
+    width: 100%;
+}
+
+.textarea {
+    width: 100%;
+    font-size: 15px;
+    padding: 8px;
+    font-family: 'roboto', sans-serif;
+    margin-bottom: 15px;
+}
+
+.button {
+    height: 35px;
+    font-size: 15px;
+    font-family: 'roboto', sans-serif;
+    width: 100%;
+    background-color: #363410;
+    border: none;
+    color: #fff;
+    font-weight: 300;
+}
 
 
 
@@ -1152,7 +1529,7 @@ header {
     header {
         height: 100vh;
         width: 100%;
-        padding: 10rem 5% 1rem;
+        padding: 5rem 5% 1rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1189,6 +1566,7 @@ header {
         height: 4.5rem;
         margin-top: 1rem;
         background-color: #fff;
+        display: none;
     }
 
 
@@ -1455,6 +1833,10 @@ header {
         padding: 2rem 0;
     }
 
+    .circles-container-mobile {
+        display: none;
+    }
+
     .circles-container {
         padding: 2rem 0 5rem;
         display: flex;
@@ -1527,13 +1909,14 @@ header {
     }
 
 
-    .box-container {
+    .team-box-container {
         display: flex;
-        justify-content: space-between;
+        flex-direction: row;
+        justify-content: space-around;
         margin-top: 50px;
     }
 
-    .team-box {
+    .team-box, .team-box2 {
         width: 390px;
         height: 500px;
         margin-left: 20px;
@@ -1595,6 +1978,119 @@ header {
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* services section */
+    /* services section */
+    /* services section */
+    /* services section */
+    /* services section */
+    /* services section */
+    .services-header {
+        height: 100vh;
+        width: 100%;
+        background-image: url(/images/services1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* contact section*/
+    /* contact section*/
+    /* contact section*/
+    /* contact section*/
+    /* contact section*/
+    .contact-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        padding: 6rem 5% 0;
+        background: #fff;
+        height: 100vh;
+        z-index: 100002;
+    }
+
+    .contact-text-info {
+        width: 50%;
+        height: 25rem;
+        padding-left: 4rem;
+    }
+
+    .contact-text {
+        color: #000;
+    }
+
+    .contact-text a {
+        font-size: 1.4rem;
+        color: #000;
+        text-decoration: none;
+        
+        font-weight: 300;
+    }
+
+    .contact-form {
+        width: 50%;
+        z-index: 100002;
+    }
+
+
+.form-text {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+.rect {
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+}
+
+.textarea {
+    width: 300px;
+    font-size: 16px;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.button {
+    background: #363410;
+    color: #fff;
+    font: 16px;
+    border: none;
+    width: 300px;
+    height: 40px;
+    font-weight: 400;
+}
 
 
 
