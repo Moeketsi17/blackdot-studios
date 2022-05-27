@@ -66,7 +66,7 @@ body{
 }
 
 .circle-intro1 {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     /* border-radius: 50%; */
     background-color: rgb(248, 248, 248);
@@ -74,6 +74,7 @@ body{
     opacity: 0;
     display: grid;
     place-items: center;
+    overflow: hidden;
 }
 
 .circle-inner1 {
@@ -821,6 +822,7 @@ header {
 .rect {
     height: 35px;
     width: 100%;
+    outline: none;
 }
 
 .textarea {
@@ -829,6 +831,7 @@ header {
     padding: 8px;
     font-family: 'roboto', sans-serif;
     margin-bottom: 15px;
+    outline: none;
 }
 
 .button {
@@ -2033,7 +2036,7 @@ header {
         padding: 6rem 5% 0;
         background: #fff;
         height: 100vh;
-        z-index: 100002;
+        z-index: 1;
     }
 
     .contact-text-info {
